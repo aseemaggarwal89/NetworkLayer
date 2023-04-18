@@ -25,13 +25,13 @@ extension NetworkManagerInjection {
 public typealias AppParameters = [String: Any]
 
 protocol AppNetworkProtocol {
-    func loadRequest<T>(requestType: APIRequestInfo, param: AppParameters?, queryParams: [CVarArg], completion: @escaping (Response<T>) -> Void) where T: Codable
+    func loadRequest<T>(requestType: AppRequestType, param: AppParameters?, queryParams: [CVarArg], completion: @escaping (Response<T>) -> Void) where T: Codable
     func loadRequestMultiForm<T>(uploadAPIRequest: APIRequest, completion: @escaping (Response<T>) -> Void) where T: Codable
     func requestCancelUploadedItem()
 }
 
 extension AppNetworkProtocol {
-    func loadRequest<T>(requestType: APIRequestInfo, completion: @escaping (Response<T>) -> Void) where T: Codable {
+    func loadRequest<T>(requestType: AppRequestType, completion: @escaping (Response<T>) -> Void) where T: Codable {
         loadRequest(requestType: requestType, param: nil, queryParams: [], completion: completion)
     }
 }
@@ -44,7 +44,7 @@ class AppNetworkManager: BaseAPIClient, AppNetworkProtocol {
         super.init(queue: networkQueue)
     }
     
-    func loadRequest<T>(requestType: APIRequestInfo, param: AppParameters?, queryParams: [CVarArg], completion: @escaping (Response<T>) -> Void) {
+    func loadRequest<T>(requestType: AppRequestType, param: AppParameters?, queryParams: [CVarArg], completion: @escaping (Response<T>) -> Void) {
         guard Connectivity.isConnectedToInternet() else {
             completion(.failure(APIError.internetNotAvailable))
             return

@@ -21,4 +21,5 @@ struct ProfileAPI {
 struct GroupsAPI {
     static let createPost = "/api/group/%@/post"
     static let updatePost = "/api/group/%@/post/%@"
+    static let groupPost =  "/api/group/%@/post"
 }

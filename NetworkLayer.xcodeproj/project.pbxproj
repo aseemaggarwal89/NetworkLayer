@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB66C01829EE6B9A0012C0A5 /* AppRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB66C01529EE6B990012C0A5 /* AppRequestInfo.swift */; };
+		EB66C01929EE6B9A0012C0A5 /* AppRequestPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB66C01629EE6B990012C0A5 /* AppRequestPaths.swift */; };
+		EB66C01A29EE6B9A0012C0A5 /* AppRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB66C01729EE6B9A0012C0A5 /* AppRequestType.swift */; };
 		EBBCA2AA29E3E76500B9DC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2A929E3E76500B9DC32 /* AppDelegate.swift */; };
 		EBBCA2AC29E3E76500B9DC32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2AB29E3E76500B9DC32 /* SceneDelegate.swift */; };
 		EBBCA2AE29E3E76500B9DC32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2AD29E3E76500B9DC32 /* ViewController.swift */; };
@@ -21,8 +24,6 @@
 		EBBCA2CC29E3E7B000B9DC32 /* BaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2C529E3E7B000B9DC32 /* BaseAPIClient.swift */; };
 		EBBCA2CD29E3E7B000B9DC32 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2C629E3E7B000B9DC32 /* APIRequest.swift */; };
 		EBBCA2D029E3E85F00B9DC32 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EBBCA2CF29E3E85F00B9DC32 /* Alamofire */; };
-		EBBCA2D229E3E93C00B9DC32 /* APIRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2D129E3E93C00B9DC32 /* APIRequestType.swift */; };
-		EBBCA2D429E3EA2300B9DC32 /* APIPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2D329E3EA2300B9DC32 /* APIPaths.swift */; };
 		EBBCA2D829E4154B00B9DC32 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2D729E4154B00B9DC32 /* AppConfiguration.swift */; };
 		EBBCA2DB29E4160400B9DC32 /* StringUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2DA29E4160400B9DC32 /* StringUtility.swift */; };
 		EBBCA2DE29E41F0A00B9DC32 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EBBCA2DD29E41F0A00B9DC32 /* FirebaseAuth */; };
@@ -37,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB66C01529EE6B990012C0A5 /* AppRequestInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequestInfo.swift; sourceTree = "<group>"; };
+		EB66C01629EE6B990012C0A5 /* AppRequestPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequestPaths.swift; sourceTree = "<group>"; };
+		EB66C01729EE6B9A0012C0A5 /* AppRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequestType.swift; sourceTree = "<group>"; };
 		EBBCA2A629E3E76500B9DC32 /* NetworkLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBCA2A929E3E76500B9DC32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBBCA2AB29E3E76500B9DC32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,8 +56,6 @@
 		EBBCA2C429E3E7B000B9DC32 /* NetworkConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnectivity.swift; sourceTree = "<group>"; };
 		EBBCA2C529E3E7B000B9DC32 /* BaseAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPIClient.swift; sourceTree = "<group>"; };
 		EBBCA2C629E3E7B000B9DC32 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		EBBCA2D129E3E93C00B9DC32 /* APIRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestType.swift; sourceTree = "<group>"; };
-		EBBCA2D329E3EA2300B9DC32 /* APIPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPaths.swift; sourceTree = "<group>"; };
 		EBBCA2D729E4154B00B9DC32 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		EBBCA2DA29E4160400B9DC32 /* StringUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtility.swift; sourceTree = "<group>"; };
 		EBBCA2E229E41F6800B9DC32 /* AppFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFirebase.swift; sourceTree = "<group>"; };
@@ -126,11 +128,12 @@
 		EBBCA2BE29E3E7B000B9DC32 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				EB66C01529EE6B990012C0A5 /* AppRequestInfo.swift */,
+				EB66C01629EE6B990012C0A5 /* AppRequestPaths.swift */,
+				EB66C01729EE6B9A0012C0A5 /* AppRequestType.swift */,
 				EBBCA2BF29E3E7B000B9DC32 /* AppNetworkConnectivity.swift */,
 				EBBCA2C029E3E7B000B9DC32 /* AppAPIRequest.swift */,
 				EBBCA2C129E3E7B000B9DC32 /* AppNetworkManager.swift */,
-				EBBCA2D129E3E93C00B9DC32 /* APIRequestType.swift */,
-				EBBCA2D329E3EA2300B9DC32 /* APIPaths.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -293,22 +296,23 @@
 				EBBCA2D829E4154B00B9DC32 /* AppConfiguration.swift in Sources */,
 				EBBCA2EC29E458AD00B9DC32 /* UploadImageDTO.swift in Sources */,
 				EBBCA2F429E45AE400B9DC32 /* GroupCreatePostDTO.swift in Sources */,
+				EB66C01829EE6B9A0012C0A5 /* AppRequestInfo.swift in Sources */,
 				EBBCA2F029E459A800B9DC32 /* encodableExtensions.swift in Sources */,
 				EBBCA2AE29E3E76500B9DC32 /* ViewController.swift in Sources */,
 				EBBCA2EE29E4590100B9DC32 /* DateExtensions.swift in Sources */,
 				EBBCA2C729E3E7B000B9DC32 /* AppNetworkConnectivity.swift in Sources */,
 				EBBCA2CB29E3E7B000B9DC32 /* NetworkConnectivity.swift in Sources */,
 				EBBCA2F229E45A6A00B9DC32 /* PostUseCase.swift in Sources */,
+				EB66C01A29EE6B9A0012C0A5 /* AppRequestType.swift in Sources */,
 				EBBCA2E929E4583F00B9DC32 /* UploadUseCase.swift in Sources */,
-				EBBCA2D229E3E93C00B9DC32 /* APIRequestType.swift in Sources */,
 				EBBCA2E629E4205500B9DC32 /* AppUserDefaults.swift in Sources */,
 				EBBCA2AA29E3E76500B9DC32 /* AppDelegate.swift in Sources */,
 				EBBCA2AC29E3E76500B9DC32 /* SceneDelegate.swift in Sources */,
+				EB66C01929EE6B9A0012C0A5 /* AppRequestPaths.swift in Sources */,
 				EBBCA2CD29E3E7B000B9DC32 /* APIRequest.swift in Sources */,
 				EBBCA2DB29E4160400B9DC32 /* StringUtility.swift in Sources */,
 				EBBCA2CC29E3E7B000B9DC32 /* BaseAPIClient.swift in Sources */,
 				EBBCA2E329E41F6800B9DC32 /* AppFirebase.swift in Sources */,
-				EBBCA2D429E3EA2300B9DC32 /* APIPaths.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

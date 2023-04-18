@@ -35,12 +35,12 @@ struct RequestConstants {
 
 
 struct APIRequest: APIRequestProtocol, ConfigurationInjection {
-    private let requestType: APIRequestInfo
+    private let requestType: AppRequestType
     var uploadMultipartFormData: ((MultipartFormData) -> Void)?
     private var param: Parameters? = nil
     private let queryParams: [CVarArg]
     
-    init(requestType: APIRequestInfo, param: Parameters? = nil,
+    init(requestType: AppRequestType, param: Parameters? = nil,
          uploadMultipartFormData: ((MultipartFormData) -> Void)? = nil,
          queryParams: [CVarArg]) {
         self.requestType = requestType
@@ -49,7 +49,7 @@ struct APIRequest: APIRequestProtocol, ConfigurationInjection {
         self.queryParams = queryParams
     }
     
-    init(requestType: APIRequestInfo, param: Parameters? = nil,uploadMultipartFormData: ((MultipartFormData) -> Void)? = nil) {
+    init(requestType: AppRequestType, param: Parameters? = nil,uploadMultipartFormData: ((MultipartFormData) -> Void)? = nil) {
         self.requestType = requestType
         self.uploadMultipartFormData = uploadMultipartFormData
         self.param = param
@@ -105,45 +105,5 @@ struct APIRequest: APIRequestProtocol, ConfigurationInjection {
     
     func isRefreshTokenRequired() -> Bool {
         return requestType.isRefreshTokenRequired
-    }
-}
-
-struct APIRequestInfo {
-    let httpMethod: HTTPMethod
-    let baseURL: String
-    let endPoint: String
-    let headers: HTTPHeaders
-    let encoding: ParameterEncoding
-    let isRefreshTokenRequired: Bool
-    let isContentLengthHeaderRequired: Bool
-}
-
-@propertyWrapper
-struct APIRequestInfoType {
-    let httpMethod: HTTPMethod
-    let endPoint: String
-    var encoding: ParameterEncoding = JSONEncoding.default
-    var isContentLengthHeaderRequired: Bool = false
-    var accessToken: Bool = false
-    var headers: HTTPHeaders = defaultHeaders()
-    var baseURL: String = AppDependencyInjection.appConfiguration.baseUrl
-    
-    var wrappedValue: APIRequestInfo {
-        var requestHeaders = headers
-        var isRefreshTokenRequired = false
-        if accessToken {
-            isRefreshTokenRequired = true
-            requestHeaders[RequestConstants.Authorization] = RequestConstants.Bearer+" " + "{saved JWT Token}"
-        }
-        return APIRequestInfo(httpMethod: httpMethod, baseURL: baseURL, endPoint: endPoint, headers: requestHeaders, encoding: encoding, isRefreshTokenRequired: isRefreshTokenRequired, isContentLengthHeaderRequired: isContentLengthHeaderRequired)
-    }
-        
-    static func defaultHeaders() -> HTTPHeaders {
-        let headers: HTTPHeaders = [RequestConstants.ContentType: RequestConstants.ContentValue,
-                                    RequestConstants.AcceptEncoding:RequestConstants.AcceptEncodingValue,
-                                    RequestConstants.AcceptField: RequestConstants.AcceptFieldValue,
-                                    RequestConstants.ConnectionField: RequestConstants.ConnectionFieldValue]
-        
-        return headers
     }
 }
