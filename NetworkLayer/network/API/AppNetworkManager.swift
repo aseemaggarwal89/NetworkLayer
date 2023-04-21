@@ -44,12 +44,7 @@ class AppNetworkManager: BaseAPIClient, AppNetworkProtocol {
         super.init(queue: networkQueue)
     }
     
-    func loadRequest<T>(requestType: AppRequestType, param: AppParameters?, queryParams: [CVarArg], completion: @escaping (Response<T>) -> Void) {
-        guard Connectivity.isConnectedToInternet() else {
-            completion(.failure(APIError.internetNotAvailable))
-            return
-        }
-        
+    func loadRequest<T>(requestType: AppRequestType, param: AppParameters?, queryParams: [CVarArg], completion: @escaping (Response<T>) -> Void) {        
         let loadRequestBlock = { [weak self] in
             let apiRequest = APIRequest(requestType: requestType, param: param, queryParams: queryParams)
             self?.loadRequest(apiRequest) { (response: APIResponse<T>) in

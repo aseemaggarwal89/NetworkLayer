@@ -21,13 +21,19 @@ protocol APIClient {
 
 class BaseAPIClient: APIClient {
     var sessionManager: Session
+    private let networkConnectivity: NetworkConnectivity
 
     init(queue: DispatchQueue) {
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = 60
         sessionConfig.timeoutIntervalForResource = 60
         self.sessionManager = Session(configuration: sessionConfig, rootQueue: queue)
-
+        self.networkConnectivity = NetworkConnectivity()
+        self.networkConnectivity.startNetworkReachabilityObserver()
+    }
+    
+    deinit {
+        self.networkConnectivity.stopListening()
     }
     
     func loadRequest<T>(_ request: APIRequestProtocol, completion: @escaping (APIResponse<T>) -> Void) {
@@ -65,7 +71,7 @@ class BaseAPIClient: APIClient {
     }
     
     private func fetch(_ request: APIRequestProtocol, _ completion: @escaping (_ success: APIData<Data>?, _ error: APIError?) -> Void) {
-        guard Connectivity.isConnectedToInternet() else {
+        guard networkConnectivity.isConnectedToInternet() else {
             completion(nil, APIError.internetNotAvailable)
             return
         }
@@ -90,7 +96,7 @@ class BaseAPIClient: APIClient {
     
     func uploadFile(_ request: APIRequestProtocol,
                 _ completion: @escaping (_ success: APIData<Data>?, _ error: APIError?) -> Void) {
-        guard Connectivity.isConnectedToInternet() else {
+        guard networkConnectivity.isConnectedToInternet() else {
             completion(nil, APIError.internetNotAvailable)
             return
         }

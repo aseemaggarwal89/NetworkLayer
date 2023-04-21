@@ -16,7 +16,6 @@
 		EBBCA2B129E3E76500B9DC32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBCA2AF29E3E76500B9DC32 /* Main.storyboard */; };
 		EBBCA2B329E3E76800B9DC32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBCA2B229E3E76800B9DC32 /* Assets.xcassets */; };
 		EBBCA2B629E3E76800B9DC32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBCA2B429E3E76800B9DC32 /* LaunchScreen.storyboard */; };
-		EBBCA2C729E3E7B000B9DC32 /* AppNetworkConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2BF29E3E7B000B9DC32 /* AppNetworkConnectivity.swift */; };
 		EBBCA2C829E3E7B000B9DC32 /* AppAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2C029E3E7B000B9DC32 /* AppAPIRequest.swift */; };
 		EBBCA2C929E3E7B000B9DC32 /* AppNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2C129E3E7B000B9DC32 /* AppNetworkManager.swift */; };
 		EBBCA2CA29E3E7B000B9DC32 /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBCA2C329E3E7B000B9DC32 /* APIData.swift */; };
@@ -49,7 +48,6 @@
 		EBBCA2B229E3E76800B9DC32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBBCA2B529E3E76800B9DC32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBBCA2B729E3E76800B9DC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBBCA2BF29E3E7B000B9DC32 /* AppNetworkConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNetworkConnectivity.swift; sourceTree = "<group>"; };
 		EBBCA2C029E3E7B000B9DC32 /* AppAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAPIRequest.swift; sourceTree = "<group>"; };
 		EBBCA2C129E3E7B000B9DC32 /* AppNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNetworkManager.swift; sourceTree = "<group>"; };
 		EBBCA2C329E3E7B000B9DC32 /* APIData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				EB66C01529EE6B990012C0A5 /* AppRequestInfo.swift */,
 				EB66C01629EE6B990012C0A5 /* AppRequestPaths.swift */,
 				EB66C01729EE6B9A0012C0A5 /* AppRequestType.swift */,
-				EBBCA2BF29E3E7B000B9DC32 /* AppNetworkConnectivity.swift */,
 				EBBCA2C029E3E7B000B9DC32 /* AppAPIRequest.swift */,
 				EBBCA2C129E3E7B000B9DC32 /* AppNetworkManager.swift */,
 			);
@@ -300,7 +297,6 @@
 				EBBCA2F029E459A800B9DC32 /* encodableExtensions.swift in Sources */,
 				EBBCA2AE29E3E76500B9DC32 /* ViewController.swift in Sources */,
 				EBBCA2EE29E4590100B9DC32 /* DateExtensions.swift in Sources */,
-				EBBCA2C729E3E7B000B9DC32 /* AppNetworkConnectivity.swift in Sources */,
 				EBBCA2CB29E3E7B000B9DC32 /* NetworkConnectivity.swift in Sources */,
 				EBBCA2F229E45A6A00B9DC32 /* PostUseCase.swift in Sources */,
 				EB66C01A29EE6B9A0012C0A5 /* AppRequestType.swift in Sources */,
