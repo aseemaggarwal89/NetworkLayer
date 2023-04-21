@@ -41,6 +41,11 @@ extension ConfigurationInjection {
   }
 }
 
+class AppSingletonInstance {
+    static let shared = AppSingletonInstance()
+    let networkService = AppNetworkManager()
+}
+
 struct AppDependencyInjection {
     static var appConfiguration: AppConfigurationProtocol {
         let environment = ProcessInfo.processInfo.environment[AppConfiguration.environmentProcessInfoKey] ?? Environment.Staging.rawValue
@@ -48,7 +53,7 @@ struct AppDependencyInjection {
     }
 
     static var networkManager: AppNetworkProtocol {
-        AppNetworkManager.shared
+        AppSingletonInstance.shared.networkService
     }
     
     static var uploadAPIRepository: UploadAPIRepositoryProtocol {

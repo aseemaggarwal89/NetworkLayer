@@ -37,9 +37,7 @@ extension AppNetworkProtocol {
 }
 
 class AppNetworkManager: BaseAPIClient, AppNetworkProtocol {
-    private let networkQueue = DispatchQueue(label: "App API requests", qos: .userInteractive, attributes: .concurrent)
-    static let shared = AppNetworkManager()
-    
+    private let networkQueue = DispatchQueue(label: "App API requests", qos: .userInteractive, attributes: .concurrent)    
     init() {
         super.init(queue: networkQueue)
     }
