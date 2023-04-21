@@ -1,7 +1,6 @@
 # NetworkLayer
 
-Network layer is the critical part in any mobile application. I have seen multiple projects with scattered and unformatted network logic without using abstraction and clear separation of responsibility that make developer life hell in long term either inducing new APIs or changing. I have face multiple challenges to incorporate such projects while working on any feature. Therefore, objective of this repository is to showcase the way to provide structured and readable
-code. 
+Network layer is the critical part in any mobile application. I have seen multiple projects with scattered and unformatted network logic without using abstraction and clear separation of responsibility that make developer life hell in long term either inducing new APIs or changing. I have face multiple challenges to incorporate such projects while working on any feature. Therefore, objective of this repository is to showcase the way to provide structured and readable code and how to implement networking in any iOS project.
 
 Network layer designed in this repository based on key aspects abstraction, separation of responsibility, protocol, layered and scalable. We have created a network layer over the networking library Alamofire
 
